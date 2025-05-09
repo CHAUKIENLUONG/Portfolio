@@ -13,7 +13,7 @@ const Projects = () => {
     {
       title: 'Project One',
       description: 'A full-stack web application built with React, Node.js, and MongoDB.',
-      image: '/src/assets/img/warehouse.png',
+      image: '/img/warehouse.png',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       github: 'https://github.com/CHAUKIENLUONG/client-warehouse-management-web.git',
       live: '#',
@@ -21,7 +21,7 @@ const Projects = () => {
     {
       title: 'Project Two',
       description: 'An e-commerce platform with real-time inventory management.',
-      image: '/src/assets/img/cinema.png',
+      image: '/img/cinema.png',
       technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
       github: 'https://github.com/CHAUKIENLUONG/B-talk.git',
       live: '#',
