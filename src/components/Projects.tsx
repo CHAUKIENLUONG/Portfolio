@@ -13,7 +13,7 @@ const Projects = () => {
     {
       title: 'Project One',
       description: 'A full-stack web application built with React, Node.js, and MongoDB.',
-      image: '/img/warehouse.png',
+      image: 'img/warehouse.png',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       github: 'https://github.com/CHAUKIENLUONG/client-warehouse-management-web.git',
       live: '#',
@@ -21,7 +21,7 @@ const Projects = () => {
     {
       title: 'Project Two',
       description: 'An e-commerce platform with real-time inventory management.',
-      image: '/img/cinema.png',
+      image: 'img/cinema.png',
       technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
       github: 'https://github.com/CHAUKIENLUONG/B-talk.git',
       live: '#',
@@ -55,7 +55,7 @@ const Projects = () => {
               className="project-card bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg"
             >
               <img
-                src={project.image}
+                src={`${import.meta.env.BASE_URL}${project.image}`}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />

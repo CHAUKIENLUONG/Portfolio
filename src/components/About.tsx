@@ -20,7 +20,7 @@ const About = () => {
           </h2>
           <div className="mt-8 flex justify-center">
             <img
-              src="/img/avatar-aws.png"
+              src={`${import.meta.env.BASE_URL}img/avatar-aws.png`}
               alt="Profile Avatar"
               className="w-48 h-48 rounded-full object-cover border-4 border-indigo-500 dark:border-indigo-400 shadow-lg"
             />
