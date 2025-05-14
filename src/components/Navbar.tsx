@@ -14,11 +14,11 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
   }
 
   return (
-    <nav className="fixed w-full bg-white dark:bg-gray-900 shadow-md z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold text-gray-800 dark:text-white">
+            <a href="#" className="text-2xl font-bold text-indigo-600 dark:text-white hover:text-indigo-700 dark:hover:text-gray-200 transition-colors duration-200">
               Portfolio
             </a>
           </div>
@@ -26,18 +26,18 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                 About
               </a>
-              <a href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <a href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                 Projects
               </a>
-              <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                 Contact
               </a>
               <button
                 onClick={() => setDarkMode(!darkMode)}
-                className="dark-mode-toggle p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-indigo-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-white transition-all duration-200 transform hover:scale-110"
               >
                 {darkMode ? '🌞' : '🌙'}
               </button>
