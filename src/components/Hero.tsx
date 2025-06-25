@@ -28,8 +28,7 @@ const Hero = () => {
             data-aos-delay="400"
             className="mt-3 max-w-md mx-auto text-base text-gray-600 dark:text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
           >
-            A passionate full-stack developer specializing in building exceptional digital experiences.
-            Currently focused on creating accessible, human-centered products.
+            A motivated fresher frontend developer with a strong interest in building user-friendly and accessible web applications. Currently focused on mastering modern frontend technologies, with a long-term goal of becoming a full-stack developer.
           </p>
           
           <div 
