@@ -53,7 +53,7 @@ const About = () => {
                 className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
               >
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Senior Developer
+                  Fresher Developer
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">Company Name • 2020 - Present</p>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">
@@ -67,7 +67,7 @@ const About = () => {
                 className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
               >
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Full Stack Developer
+                  Frontend Developer
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">Previous Company • 2018 - 2020</p>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">
