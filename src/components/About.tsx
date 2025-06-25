@@ -15,15 +15,15 @@ const About = () => {
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 
+          <h2
             data-aos="fade-up"
             className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl"
           >
             About Me
           </h2>
-          <div 
+          <div
             data-aos="zoom-in"
-            data-aos-delay="200"
+            data-aos-delay="100"
             className="mt-8 flex justify-center"
           >
             <img
@@ -32,9 +32,9 @@ const About = () => {
               className="w-48 h-48 rounded-full object-cover border-4 border-indigo-500 dark:border-indigo-400 shadow-lg"
             />
           </div>
-          <p 
+          <p
             data-aos="fade-up"
-            data-aos-delay="400"
+            data-aos-delay="200"
             className="mt-4 text-lg text-gray-500 dark:text-gray-300"
           >
             I'm a passionate developer with a strong foundation in web development and a keen eye for creating engaging user experiences.
@@ -42,14 +42,14 @@ const About = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div data-aos="fade-right" data-aos-delay="600">
+          <div data-aos="fade-right" data-aos-delay="300">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Experience
             </h3>
             <div className="space-y-6">
-              <div 
+              <div
                 data-aos="fade-up"
-                data-aos-delay="800"
+                data-aos-delay="400"
                 className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
               >
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -61,9 +61,9 @@ const About = () => {
                   Implemented CI/CD pipelines and improved team productivity by 40%.
                 </p>
               </div>
-              <div 
+              <div
                 data-aos="fade-up"
-                data-aos-delay="1000"
+                data-aos-delay="600"
                 className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
               >
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -78,16 +78,16 @@ const About = () => {
             </div>
           </div>
 
-          <div data-aos="fade-left" data-aos-delay="600">
+          <div data-aos="fade-left" data-aos-delay="300">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Skills
             </h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
-                <div 
+                <div
                   key={skill.name}
                   data-aos="fade-up"
-                  data-aos-delay={800 + index * 200}
+                  data-aos-delay={400 + index * 100}
                 >
                   <div className="flex justify-between mb-1">
                     <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
@@ -109,4 +109,4 @@ const About = () => {
   )
 }
 
-export default About 
+export default About
