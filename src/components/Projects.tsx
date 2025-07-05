@@ -5,34 +5,30 @@ interface Project {
   image: string;
   technologies: string[];
   github: string;
-  live: string;
 }
 
 const Projects = () => {
   const projects: Project[] = [
     {
-      title: 'Project One',
-      description: 'A full-stack web application built with React, Node.js, and MongoDB.',
+      title: 'Web Warehouse Management',
+      description: 'A comprehensive web application for managing warehouse operations, including inventory tracking and order management.',
       image: 'img/warehouse.png',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+      technologies: ['React', 'Node.js', 'MySQL'],
       github: 'https://github.com/CHAUKIENLUONG/client-warehouse-management-web.git',
-      live: '#',
     },
     {
-      title: 'Project Two',
-      description: 'An e-commerce platform with real-time inventory management.',
+      title: 'Web Cinema ticket booking',
+      description: 'A responsive web application for booking cinema tickets online.',
       image: 'img/cinema.png',
-      technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'SCSS', 'C#', 'ASP.NET Core', 'SQL Server'],
       github: 'https://github.com/CHAUKIENLUONG/B-talk.git',
-      live: '#',
     },
     {
-      title: 'Project Three',
-      description: 'A social media dashboard with analytics and reporting features.',
-      image: 'https://via.placeholder.com/500x300',
-      technologies: ['React', 'GraphQL', 'PostgreSQL', 'Docker'],
-      github: '#',
-      live: '#',
+      title: 'Web Game Online',
+      description: 'An online platform for playing and purchasing video games, featuring user reviews and ratings.',
+      image: 'img/webGame.png',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'MySQL'],
+      github: 'https://github.com/nkhoaa/laravel-web-game.git',
     },
   ]
 
@@ -40,13 +36,13 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 
+          <h2
             data-aos="fade-up"
             className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl"
           >
             My Projects
           </h2>
-          <p 
+          <p
             data-aos="fade-up"
             data-aos-delay="200"
             className="mt-4 text-lg text-gray-500 dark:text-gray-300"
@@ -95,14 +91,6 @@ const Projects = () => {
                     className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                   >
                     GitHub
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                  >
-                    Live Demo
                   </a>
                 </div>
               </div>
