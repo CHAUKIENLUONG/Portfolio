@@ -13,7 +13,7 @@ const Projects = () => {
       title: 'Web Warehouse Management',
       description: 'A comprehensive web application for managing warehouse operations, including inventory tracking and order management.',
       image: 'img/warehouse.png',
-      technologies: ['React', 'Node.js', 'MySQL'],
+      technologies: ['React', 'SCSS', 'Node.js', 'MySQL'],
       github: 'https://github.com/CHAUKIENLUONG/client-warehouse-management-web.git',
     },
     {
