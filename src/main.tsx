@@ -9,7 +9,6 @@ import i18n from './i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Flip } from 'gsap/Flip'
-import { useGSAP } from '@gsap/react'
 
 // Register GSAP plugins once globally
 gsap.registerPlugin(ScrollTrigger, Flip)
