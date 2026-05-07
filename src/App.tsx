@@ -1,18 +1,28 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, lazy, Suspense } from 'react'
 import Navbar from './components/Navbar'
 import './assets/css/style.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Hero from './components/Hero'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+const Experience = lazy(() => import('./components/Experience'))
+const TechStack = lazy(() => import('./components/TechStack'))
+const Projects = lazy(() => import('./components/Projects'))
+const Contact = lazy(() => import('./components/Contact'))
+const Footer = lazy(() => import('./components/Footer'))
+
+const SectionLoader = () => (
+  <div className="flex min-h-[50vh] w-full items-center justify-center bg-background">
+    <div className="relative flex flex-col items-center">
+      <div className="h-12 w-12 animate-spin rounded-full border-2 border-primary/20 border-t-primary" />
+      <span className="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/50">
+        Loading Section
+      </span>
+    </div>
+  </div>
+)
 
 function App() {
   const container = useRef<HTMLDivElement>(null)
-
-
 
   useEffect(() => {
     // Force scroll to top on mount with a small delay to override GSAP/Lazy loading behavior
@@ -37,12 +47,17 @@ function App() {
 
       <main>
         <Hero />
-        <Experience />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<SectionLoader />}>
+          <Experience />
+          <TechStack />
+          <Projects />
+          <Contact />
+        </Suspense>
       </main>
 
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   )
 }

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/avif" href="/favicon-card-page.avif" />
-  <link rel="preload" as="image" href="/spritesheets/sprite-mobile-0.avif" media="(max-width: 639px)" />
-  <link rel="preload" as="image" href="/spritesheets/sprite-desktop-0.avif" media="(min-width: 640px)" />
+  <link rel="preload" as="image" href="/spritesheets/sprite-mobile-0.avif" media="(max-width: 639px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/spritesheets/sprite-desktop-0.avif" media="(min-width: 640px)" fetchpriority="high" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Chau Kien Luong - Fullstack Developer Portfolio. Crafting seamless digital experiences with React, Node.js, and GSAP." />
@@ -16,9 +16,14 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  </noscript>
   <title>Chau Kien Luong | Fullstack Developer</title>
 </head>
 

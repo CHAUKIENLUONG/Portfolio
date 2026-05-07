@@ -180,3 +180,4 @@
     @apply border border-white/10 bg-white/[0.08] backdrop-blur-sm shadow-glass-ring;
   }
 }
+.flip-fullscreen { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; border-radius: 0 !important; z-index: 100 !important; margin: 0 !important; object-fit: cover; }

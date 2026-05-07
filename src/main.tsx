@@ -8,10 +8,11 @@ import { store } from './store/store'
 import i18n from './i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Flip } from 'gsap/Flip'
 import { useGSAP } from '@gsap/react'
 
 // Register GSAP plugins once globally
-gsap.registerPlugin(ScrollTrigger, useGSAP)
+gsap.registerPlugin(ScrollTrigger, Flip)
 
 // Immediately disable scroll restoration and scroll to top
 if ('scrollRestoration' in window.history) {
