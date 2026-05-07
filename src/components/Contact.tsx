@@ -19,22 +19,48 @@ const Contact = () => {
   const { isMobile, isTablet, isLaptop } = useResponsiveQuery()
 
   useGSAP(() => {
-    if (isMobile || isTablet) return
-    // Contact Content
-    const contactLeft = container.current?.querySelector('.asymmetric-grid > div:nth-child(1)')
-    const contactRight = container.current?.querySelector('.asymmetric-grid > div:nth-child(2)')
-    if (contactLeft) {
-      gsap.fromTo(contactLeft,
-        { opacity: 0, x: -50 },
-        { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: contactLeft, start: 'top 80%' } }
-      )
-    }
-    if (contactRight) {
-      gsap.fromTo(contactRight,
-        { opacity: 0, x: 50 },
-        { opacity: 1, x: 0, duration: 0.8, delay: 0.2, ease: 'power3.out', scrollTrigger: { trigger: contactRight, start: 'top 80%' } }
-      )
-    }
+    if (!container.current) return
+
+    const mm = gsap.matchMedia()
+
+    mm.add({
+      isDesktop: "(min-width: 1024px)",
+      isMobile: "(max-width: 1023px)"
+    }, (context) => {
+      const { isDesktop } = context.conditions!
+
+      if (isDesktop) {
+        const contactLeft = container.current?.querySelector('.asymmetric-grid > div:nth-child(1)')
+        const contactRight = container.current?.querySelector('.asymmetric-grid > div:nth-child(2)')
+        
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#contact",
+            start: "top 80%",
+            invalidateOnRefresh: true
+          }
+        })
+
+        if (contactLeft) {
+          tl.fromTo(contactLeft,
+            { opacity: 0, x: -50 },
+            { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' },
+            0
+          )
+        }
+        if (contactRight) {
+          tl.fromTo(contactRight,
+            { opacity: 0, x: 50 },
+            { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' },
+            0.2
+          )
+        }
+      } else {
+        gsap.set(['.asymmetric-grid > div'], { opacity: 1, x: 0 })
+      }
+    })
+
+    return () => mm.revert()
   }, { scope: container })
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
