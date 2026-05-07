@@ -4,8 +4,8 @@ import { useGSAP } from '@gsap/react'
 import { useResponsiveQuery } from '../hooks/mediaQuery'
 
 // Spritesheet configuration (must match generate-spritesheets.mjs output)
-const FRAME_COUNT = 70
-const SHEET_COUNT = 5
+const FRAME_COUNT = 42
+const SHEET_COUNT = 3
 const FRAMES_PER_SHEET = 14
 const SPRITE_COLS = 2
 const BACKGROUND_COLOR = '#050505'
