@@ -180,7 +180,6 @@ const CharacterScrollReveal = ({
     )
 
     return true
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const renderProgress = useCallback((currentProgress: number) => {
@@ -327,7 +326,6 @@ const CharacterScrollReveal = ({
     return () => {
       mm.revert()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, { scope: wrapperRef })
 
   const stageClassName = `relative w-full overflow-hidden bg-[#050505] ${isMobile
